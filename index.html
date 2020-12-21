@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Music website</title>
+    <<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://use.typekit.net/edr5elx.css" rel="stylesheet">
+  </head>
+  <style media="screen">
+    body {background-color: #8B0000}
+  </style>
+  <body>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Welcome to my music website </h1>
+        <h1>Welcome to perfect harmony</h1>
+      </div>
+    </div>
+    <div id="Navbar">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="myportfolio.html">My Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="stuff" id="first">
+      <audio controls>
+       <source src="My first Beat.mp3" type="audio/mpeg">
+      </audio>
+               <p>This is one of my first beats when I first started
+               to get at beat making im still no where done when
+               it comes to leaning beat making. This is only a sample
+               of it because I like to keep the full verison to myself
+               or in case someone wants it.</p>
+    </div>
+    <div class="stuff" id="second">
+      <audio controls>
+       <source src="My second Beat.mp3" type="audio/mpeg">
+      </audio>
+                <p>This is my second beat that I have been working on
+                this one is when I started to mess a lot more when It
+                came to sampling music I did pretty well for a guy who
+                isn't that good with beat making yet lol. I hope you
+                enjoy the 4 beats I post on this website so far.</p>
+    </div>
+    <div class="stuff" id="third">
+      <audio controls>
+       <source src="My Third Beat.mp3" type="audio/mpeg">
+      </audio>
+               <p>This beat I took inspiration from lil uzi
+               I  wanted to see if I could make a beat that I
+               think he would rap on and it came out pretty
+               good opinion. it os kind of short because like
+               I said in my first beat I did not want to post
+               the full beat.</p>
+    </div>
+   <div class="stuff" id="fourth">
+      <audio controls>
+       <source src="My fourth Beat.mp3" type="audio/mpeg">
+      </audio>
+              <p>This is my fourth and last beat that I posted on
+              this website I made this beat with a friend this is
+              really the first time I made a beat with anyone because
+              I believe that my other beats were no where as good as they
+              are now. I did a lot of research in my spare time to learn
+              how to do some of this.</p>
+    </div>
+    <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+    </head>
+    <style>
+      #sketch {
+        border: 1px solid #C0C0C0;
+      }
+    </style>
+    <body>
+     <canvas id="sketch" width="480" height="720"> </canvas>
+      <script>
+        document.addEventListener('DOMContentLoaded', main);
+        var sketch;
+        var context;
+        var circle;
+        var dx = 2;
+        var dy = 2;
+        var fps = 10;
+        var animation;
+        function main() {
+          sketch = document.getElementById('sketch');
+          context = sketch.getContext('2d');
+          circle = {'x': 35, 'y': sketch.offsetHeight / 2, 'r': 35};
+          animation = setInterval(animate, fps);
+        }
+        function animate() {
+          context.clearRect(5, 5, sketch.offsetWidth, sketch.offsetHeight);
+          draw_circle(circle.x, circle.y, circle.r);
+          circle.x = circle.x + dx;
+          circle.y = circle.y + dy;
+            if (circle.x + circle.r > sketch.width || circle.x - circle.r < 0) {
+              dx = -dx;
+            }
+            if (circle.y + circle.r > sketch.height || circle.y - circle.r < 0) {
+              dy = -dy;
+            }
+          }
+        function draw_circle(x, y, r) {
+           context.beginPath();
+           context.arc(x, y, r, 0, 2 * Math.PI, true);
+           context.closePath();
+           context.fill();
+          }
+      </script>
+    </body>
+    </html>
+
+  <script src="navbar.v01.js"></script
+  </body>
+</html>
